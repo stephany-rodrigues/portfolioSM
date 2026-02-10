@@ -36,16 +36,15 @@ body {
 h1, h2, h3, .mono-font { font-family: 'Courier Prime', monospace; }
 strong { color: var(--pink); }
 
-/* --- HERO SECTION (CAPA) --- */
+/* --- HERO SECTION --- */
 .hero-section {
   width: 100%;
-  height: 65vh; /* Altura ajustada (PC) */
+  height: 65vh; 
   position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 50px;
-  
   background-image: url('stephany.hero.jpeg'); 
   background-size: cover;
   background-position: center center;
@@ -67,9 +66,7 @@ strong { color: var(--pink); }
 }
 
 /* --- LAYOUT GERAL --- */
-.container {
-  max-width: 1100px; margin: 0 auto; padding: 60px 20px;
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 section { margin-bottom: 120px; }
 
 .section-title {
@@ -79,9 +76,7 @@ section { margin-bottom: 120px; }
 }
 
 /* --- SOBRE MIM --- */
-.about-grid {
-  display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: center;
-}
+.about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: center; }
 .polaroid-wrapper { position: relative; transform: rotate(-3deg); }
 .polaroid-wrapper img {
   width: 100%; border: 15px solid #fff; border-bottom: 40px solid #fff;
@@ -91,7 +86,7 @@ section { margin-bottom: 120px; }
   position: absolute; top: -15px; left: 30%; width: 100px; height: 35px;
   background-color: rgba(255,255,255,0.6);
   border-left: 2px dashed rgba(0,0,0,0.1); border-right: 2px dashed rgba(0,0,0,0.1);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); transform: rotate(-5deg); z-index: 10;
+  transform: rotate(-5deg); z-index: 10;
 }
 .about-text {
   font-size: 1.1rem; line-height: 1.8; background: #fff; padding: 30px;
@@ -125,44 +120,24 @@ section { margin-bottom: 120px; }
 .work-desc { margin-top:10px; max-width: 800px; font-size: 0.95rem; line-height: 1.6; }
 
 .gallery-container {
-  display: flex;
-  overflow-x: auto; 
-  gap: 20px;
-  padding: 20px 5px 40px 5px; 
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: var(--pink) #eee;
+  display: flex; overflow-x: auto; gap: 20px; padding: 20px 5px 40px 5px; 
+  scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--pink) #eee;
 }
-
 .gallery-container::-webkit-scrollbar { height: 10px; }
 .gallery-container::-webkit-scrollbar-track { background: #eee; border-radius: 10px; }
 .gallery-container::-webkit-scrollbar-thumb { background: var(--pink); border-radius: 10px; border: 2px solid #eee; }
 
 .gallery-item {
-  flex: 0 0 auto; 
-  height: 500px; 
-  border-radius: 15px;
-  overflow: hidden;
-  border: 3px solid #000;
-  box-shadow: 5px 5px 0px rgba(0,0,0,0.8);
-  background: #000;
-  position: relative;
-  transition: transform 0.3s;
+  flex: 0 0 auto; height: 500px; border-radius: 15px; overflow: hidden;
+  border: 3px solid #000; box-shadow: 5px 5px 0px rgba(0,0,0,0.8);
+  background: #000; position: relative; transition: transform 0.3s;
 }
-
 .gallery-item:hover { transform: translateY(-5px); }
-
-/* Larguras */
 .type-card { width: 400px; background: #fff; }
 .type-video { width: 280px; }
+.gallery-item img, .gallery-item video { width: 100%; height: 100%; object-fit: cover; }
 
-.gallery-item img, .gallery-item video {
-  width: 100%; height: 100%; object-fit: cover;
-}
-
-.drag-hint {
-  text-align: right; font-family: 'Courier Prime'; font-size: 0.8rem; margin-top: -30px; margin-bottom: 10px; color: #666;
-}
+.drag-hint { text-align: right; font-family: 'Courier Prime'; font-size: 0.8rem; margin-top: -30px; margin-bottom: 10px; color: #666; }
 
 /* --- FOOTER --- */
 .footer-contact { background: #222; color: #fff; padding: 60px 20px; text-align: center; }
@@ -170,19 +145,11 @@ section { margin-bottom: 120px; }
 .doodle-icon { font-size: 3rem; color: #fff; transition: transform 0.3s, color 0.3s; }
 .doodle-icon:hover { transform: scale(1.2) rotate(-10deg); color: var(--pink); }
 
-/* --- RESPONSIVIDADE --- */
 @media(max-width: 768px) {
-  /* Capa ajustada para celular */
-  .hero-section {
-    height: 40vh; 
-    background-position: center top; 
-  }
-
+  .hero-section { height: 40vh; background-position: center top; }
   .about-grid { grid-template-columns: 1fr; text-align: center; }
   .polaroid-wrapper { width: 70%; margin: 0 auto; }
-  .tape { left: 50%; transform: translateX(-50%); }
   .skills-services-wrapper { grid-template-columns: 1fr; }
-  
   .gallery-item { height: 400px; }
   .type-card { width: 320px; }
   .type-video { width: 225px; }
@@ -204,14 +171,13 @@ section { margin-bottom: 120px; }
         <div class="tape"></div>
         <img src="stephany.jpeg" alt="Stephany Rodrigues">
       </div>
-      
       <div class="about-text">
         <p>Sou Social Media com experiência na criação de estratégias e conteúdos digitais. Ao longo da minha trajetória, desenvolvi campanhas, vídeos e postagens que aproximam pessoas e fortalecem marcas de forma autêntica e criativa.</p>
         <br>
-        <p>Sou formada em <strong>Análise e Desenvolvimento de Sistemas</strong> e atualmente me preparo para iniciar uma pós-graduação em <strong>Data Analytics</strong>, unindo minhas duas paixões: marketing e tecnologia.</p>
+        <p>Sou formada em <strong>Análise e Desenvolvimento de Sistemas</strong> e atualmente me preparo para iniciar uma pós-graduação em <strong>Big Data para BI e BA</strong>, unindo minhas duas paixões: marketing e tecnologia.</p>
         <br>
         <p style="font-family: 'Courier Prime'; font-size: 0.9rem; color: #666;">
-          <i class="fas fa-code"></i> Este site foi desenvolvido por mim (HTML/CSS), mostrando meus conhecimentos em front-end. Acredito que a comunicação é ainda mais poderosa quando guiada por dados e propósito. ✨
+          <i class="fas fa-code"></i> Este site foi desenvolvido por mim (HTML/CSS), mostrando meus conhecimentos em front-end. ✨
         </p>
       </div>
     </div>
@@ -230,8 +196,8 @@ section { margin-bottom: 120px; }
         <div class="sticker st-pink">Canva</div>
         <div class="sticker st-green">Trello</div>
         <div class="sticker st-purple">Meta Ads</div>
+        <div class="sticker st-pink">Marketing de Saúde</div>
       </div>
-
       <div class="post-it-container">
         <div class="post-it" style="background:#ffebcd;">
           <h4>01. Estratégia</h4>
@@ -253,89 +219,62 @@ section { margin-bottom: 120px; }
     <div class="work-header">
       <h2 class="section-title">Os Pedagógicos</h2>
       <p class="mono-font">🎥 Marketing Digital • Edição • Estratégia</p>
-      <p class="work-desc">
-        Nos Pedagógicos, aprofundei meus conhecimentos em marketing digital. Atuo na produção de posts, cards e vídeos desde a captação até a edição final. Utilizo ferramentas como Trello, MLabs e CapCut para otimizar o fluxo.
-      </p>
+      <p class="work-desc">Atuo na produção de posts e vídeos desde a captação até a edição final, utilizando ferramentas como Trello e CapCut.</p>
     </div>
-    <p class="drag-hint">→ Arraste para o lado para ver mais →</p>
-
+    <p class="drag-hint">→ Arraste para o lado →</p>
     <div class="gallery-container">
-      <div class="gallery-item type-card">
-        <img src="pedagogicos-card1.jpeg" alt="Post Destaque Pedagógicos">
-      </div>
-      
-      <div class="gallery-item type-video">
-        <video src="pedagogicos1.mp4" loop muted playsinline controls></video>
-      </div>
-      <div class="gallery-item type-video">
-        <video src="pedagogicos2.mp4" loop muted playsinline controls></video>
-      </div>
-      <div class="gallery-item type-video">
-        <video src="pedagogicos3.mp4" loop muted playsinline controls></video>
-      </div>
-      <div class="gallery-item type-video">
-        <video src="pedagogicos4.mp4" loop muted playsinline controls></video>
-      </div>
+      <div class="gallery-item type-card"><img src="pedagogicos-card1.jpeg"></div>
+      <div class="gallery-item type-video"><video src="pedagogicos1.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="pedagogicos2.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="pedagogicos3.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="pedagogicos4.mp4" loop muted playsinline controls></video></div>
+    </div>
+  </section>
+
+  <section id="luth">
+    <div class="work-header">
+      <h2 class="section-title">LuTh Estética Contemporânea</h2>
+      <p class="mono-font">✨ Estética Avançada • Saúde • Imersão</p>
+      <p class="work-desc">Imersão no setor de estética para traduzir procedimentos técnicos em <strong>conteúdo visual dinâmico</strong> e humanizado.</p>
+    </div>
+    <p class="drag-hint">→ Arraste para o lado →</p>
+    <div class="gallery-container">
+      <div class="gallery-item type-card"><img src="imgluth.png" alt="LuTh Estética"></div>
+      <div class="gallery-item type-video"><video src="estvid1.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="estvid2.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="estvid3.mp4" loop muted playsinline controls></video></div>
     </div>
   </section>
 
   <section id="biblioteca">
     <div class="work-header">
-      <h2 class="section-title">Biblioteca Pública</h2>
+      <h2 class="section-title">Biblioteca Pública de Taguatinga</h2>
       <p class="mono-font">📚 Gestão de Comunidade • Cultura</p>
-      <p class="work-desc">
-        Responsável pela administração do perfil, planejamento e criação. O resultado? <strong style="background:var(--green); color:#fff; padding:0 5px;">Aumento nas doações de livros</strong> e fluxo de pessoas. Fortaleci meu storytelling e comunicação institucional.
-      </p>
+      <p class="work-desc">Planejamento e criação de conteúdo resultando em aumento de doações e fluxo de pessoas.</p>
     </div>
-    <p class="drag-hint">→ Arraste para o lado para ver mais →</p>
-
+    <p class="drag-hint">→ Arraste para o lado →</p>
     <div class="gallery-container">
-      <div class="gallery-item type-card">
-        <img src="biblioteca-card1.jpeg" alt="Card Destaque Biblioteca">
-      </div>
-      
-      <div class="gallery-item type-video">
-        <video src="biblioteca1.mp4" loop muted playsinline controls></video>
-      </div>
-      <div class="gallery-item type-video">
-        <video src="biblioteca2.mp4" loop muted playsinline controls></video>
-      </div>
-      <div class="gallery-item type-video">
-        <video src="biblioteca3.mp4" loop muted playsinline controls></video> 
-      </div>
-      <div class="gallery-item type-video">
-        <video src="biblioteca4.mp4" loop muted playsinline controls></video>
-      </div>
+      <div class="gallery-item type-card"><img src="biblioteca-card1.jpeg"></div>
+      <div class="gallery-item type-video"><video src="biblioteca1.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="biblioteca2.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="biblioteca3.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="biblioteca4.mp4" loop muted playsinline controls></video></div>
     </div>
   </section>
 
   <section id="escola">
     <div class="work-header">
-      <h2 class="section-title">Colégio Sagrada Família</h2>
-      <p class="mono-font">🎓 Marketing Educacional • Matrículas</p>
-      <p class="work-desc">
-        Onde tudo começou. Fui responsável por registrar a rotina escolar, criar cards interativos e a campanha de matrícula. Essa experiência despertou minha paixão pela área criativa.
-      </p>
+      <h2 class="section-title">Colégio Sagrada Família Menino Deus</h2>
+      <p class="mono-font">🎓 Marketing Educacional</p>
+      <p class="work-desc">Registro da rotina escolar, cards interativos e campanhas de matrícula.</p>
     </div>
-    <p class="drag-hint">→ Arraste para o lado para ver mais →</p>
-
+    <p class="drag-hint">→ Arraste para o lado →</p>
     <div class="gallery-container">
-      <div class="gallery-item type-card">
-        <img src="sagrada-card1.jpeg" alt="Card Destaque Escola">
-      </div>
-      
-      <div class="gallery-item type-video">
-        <video src="sagrada1.mp4" loop muted playsinline controls></video>
-      </div>
-      <div class="gallery-item type-video">
-        <video src="sagrada2.mp4" loop muted playsinline controls></video>
-      </div>
-      <div class="gallery-item type-video">
-        <video src="sagrada3.mp4" loop muted playsinline controls></video>
-      </div>
-      <div class="gallery-item type-video">
-        <video src="sagrada4.mp4" loop muted playsinline controls></video>
-      </div>
+      <div class="gallery-item type-card"><img src="sagrada-card1.jpeg"></div>
+      <div class="gallery-item type-video"><video src="sagrada1.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="sagrada2.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="sagrada3.mp4" loop muted playsinline controls></video></div>
+      <div class="gallery-item type-video"><video src="sagrada4.mp4" loop muted playsinline controls></video></div>
     </div>
   </section>
 
@@ -343,32 +282,19 @@ section { margin-bottom: 120px; }
 
 <footer class="footer-contact" id="contato">
   <h2>Vamos criar algo viral juntos?</h2>
-  <p class="mono-font" style="margin-top:10px;">Mande um "Oi!"</p>
-  
   <div class="social-doodles">
     <a href="https://wa.me/5561993131550" target="_blank" class="doodle-icon"><i class="fab fa-whatsapp"></i></a>
     <a href="https://www.linkedin.com/in/stephany-rodrigues-350a62207" target="_blank" class="doodle-icon"><i class="fab fa-linkedin"></i></a>
     <a href="mailto:stephany84740963@gmail.com" class="doodle-icon"><i class="fas fa-envelope"></i></a>
   </div>
-  
-  <p style="margin-top: 50px; font-size: 0.8rem; opacity: 0.6;">
-    © 2026 Stephany Rodrigues | Feito com 💖 e código.
-  </p>
+  <p style="margin-top: 50px; font-size: 0.8rem; opacity: 0.6;">© 2026 Stephany Rodrigues | Feito com 💖 e código.</p>
 </footer>
 
 <script>
   const videos = document.querySelectorAll('video');
-
   videos.forEach(video => {
-    // Mouse entra: Toca (mudo, se não foi ativado pelo controle)
-    video.addEventListener('mouseenter', () => {
-      video.play();
-    });
-    
-    // Mouse sai: Pausa
-    video.addEventListener('mouseleave', () => {
-      video.pause();
-    });
+    video.addEventListener('mouseenter', () => video.play());
+    video.addEventListener('mouseleave', () => video.pause());
   });
 </script>
 
